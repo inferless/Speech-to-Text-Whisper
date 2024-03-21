@@ -15,7 +15,7 @@ class InferlessPythonModel:
     def infer(self, inputs):
         audio_data = inputs["audio_base64"]
         audio_file = "output.mp3"
-        base64_to_mp3(audio_data,audio_file)
+        self.base64_to_mp3(audio_data,audio_file)
         segments, info = self.model.transcribe(audio_file, beam_size=5)
         text = ''.join([segment.text for segment in segments])
         
