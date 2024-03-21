@@ -7,7 +7,7 @@ class InferlessPythonModel:
         model_size = "large-v3"
         self.model = WhisperModel(model_size, device="cuda", compute_type="float16")
     
-    def base64_to_mp3(base64_data, output_file_path):
+    def base64_to_mp3(self, base64_data, output_file_path):
         mp3_data = base64.b64decode(base64_data)
         with open(output_file_path, "wb") as mp3_file:
                 mp3_file.write(mp3_data)
