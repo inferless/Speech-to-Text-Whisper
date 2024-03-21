@@ -1,5 +1,5 @@
 INPUT_SCHEMA = {
-    "audio_url": {
+    "audio_base64": {
         'datatype': 'STRING',
         'required': True,
         'shape': [1],
